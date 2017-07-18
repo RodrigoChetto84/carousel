@@ -12,6 +12,9 @@
 		FB10F47B1F1E9DC500AB42F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB10F4791F1E9DC500AB42F3 /* Main.storyboard */; };
 		FB10F47D1F1E9DC500AB42F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB10F47C1F1E9DC500AB42F3 /* Assets.xcassets */; };
 		FB10F4801F1E9DC500AB42F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB10F47E1F1E9DC500AB42F3 /* LaunchScreen.storyboard */; };
+		FB10F4931F1EA5B200AB42F3 /* carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10F4911F1EA5B200AB42F3 /* carousel.swift */; };
+		FB10F4941F1EA5B200AB42F3 /* movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10F4921F1EA5B200AB42F3 /* movie.swift */; };
+		FB10F49A1F1EA79000AB42F3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB10F4991F1EA79000AB42F3 /* iCarousel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		FB10F47C1F1E9DC500AB42F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB10F47F1F1E9DC500AB42F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB10F4811F1E9DC500AB42F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB10F4911F1EA5B200AB42F3 /* carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carousel.swift; sourceTree = "<group>"; };
+		FB10F4921F1EA5B200AB42F3 /* movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = movie.swift; sourceTree = "<group>"; };
+		FB10F4981F1EA79000AB42F3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		FB10F4991F1EA79000AB42F3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		FB10F49B1F1EA7F000AB42F3 /* CarrouselTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarrouselTest-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		FB10F4741F1E9DC500AB42F3 /* CarrouselTest */ = {
 			isa = PBXGroup;
 			children = (
+				FB10F4901F1EA48C00AB42F3 /* Model */,
+				FB10F4871F1EA02400AB42F3 /* Libraries */,
 				FB10F4751F1E9DC500AB42F3 /* AppDelegate.swift */,
 				FB10F4771F1E9DC500AB42F3 /* ViewController.swift */,
 				FB10F4791F1E9DC500AB42F3 /* Main.storyboard */,
@@ -62,6 +72,26 @@
 				FB10F4811F1E9DC500AB42F3 /* Info.plist */,
 			);
 			path = CarrouselTest;
+			sourceTree = "<group>";
+		};
+		FB10F4871F1EA02400AB42F3 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				FB10F4981F1EA79000AB42F3 /* iCarousel.h */,
+				FB10F4991F1EA79000AB42F3 /* iCarousel.m */,
+				FB10F49B1F1EA7F000AB42F3 /* CarrouselTest-Bridging-Header.h */,
+			);
+			name = Libraries;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FB10F4901F1EA48C00AB42F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB10F4911F1EA5B200AB42F3 /* carousel.swift */,
+				FB10F4921F1EA5B200AB42F3 /* movie.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +126,7 @@
 				TargetAttributes = {
 					FB10F4711F1E9DC500AB42F3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,7 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB10F4781F1E9DC500AB42F3 /* ViewController.swift in Sources */,
+				FB10F49A1F1EA79000AB42F3 /* iCarousel.m in Sources */,
 				FB10F4761F1E9DC500AB42F3 /* AppDelegate.swift in Sources */,
+				FB10F4931F1EA5B200AB42F3 /* carousel.swift in Sources */,
+				FB10F4941F1EA5B200AB42F3 /* movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +296,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CarrouselTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RodrigoChetto.CarrouselTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarrouselTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,10 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CarrouselTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RodrigoChetto.CarrouselTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarrouselTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
