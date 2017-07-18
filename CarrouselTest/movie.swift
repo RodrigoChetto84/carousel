@@ -8,12 +8,12 @@ struct Movie{
 
 extension Movie {
 	init?(json: [String: Any]) {
-		guard let title= json["title"] as? String,
-			let url= json["url"] as? String
+		guard let title = json["title"] as? String,
+			let url = json["url"] as? String
 			else {
 				return nil
 		}
-		let video : String? = json["video"]
+		let video : String? = json["video"] as? String
 		
 		self.title = title
 		self.url = url
