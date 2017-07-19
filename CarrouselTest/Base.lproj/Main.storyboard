@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carouselCell" rowHeight="639" translatesAutoresizingMaskIntoConstraints="NO" id="mXD-C7-tQ4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXD-C7-tQ4" id="MHq-rL-X5p" customClass="iCarousel">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <connections>
-                                        <outlet property="dataSource" destination="mXD-C7-tQ4" id="gzD-c6-bi7"/>
-                                        <outlet property="delegate" destination="mXD-C7-tQ4" id="eNn-3O-AUS"/>
-                                    </connections>
-                                </tableViewCellContentView>
-                            </tableViewCell>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="637" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eXy-Mg-x5z">
+                                <rect key="frame" x="24" y="28" width="327" height="631"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="carouselCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="carouselCell" rowHeight="637" id="mXD-C7-tQ4" userLabel="Table View Cell" customClass="CarouselTableViewCell" customModule="CarrouselTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-8" width="327" height="637"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXD-C7-tQ4" id="MHq-rL-X5p" customClass="iCarousel">
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="637"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="mXD-C7-tQ4" id="s1T-mv-78O"/>
+                                                <outlet property="delegate" destination="mXD-C7-tQ4" id="Uuz-Au-SgZ"/>
+                                            </connections>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="icarrousel" destination="MHq-rL-X5p" id="jvF-Zw-IdM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eXy-Mg-x5z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="BID-XN-zx8"/>
+                            <constraint firstItem="eXy-Mg-x5z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O2z-6r-zhm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eXy-Mg-x5z" secondAttribute="bottom" constant="8" id="e3s-EO-5KX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eXy-Mg-x5z" secondAttribute="trailing" constant="8" id="xXF-Ig-Nzg"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="carrouselTable" destination="mXD-C7-tQ4" id="Ox1-pm-vTn"/>
+                        <outlet property="carrouselTableView" destination="eXy-Mg-x5z" id="pI4-R0-wpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
