@@ -3,6 +3,31 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Carousel.init(json : [String : Any]) -&gt; Carousel?:carousel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;type&quot;] as? String">
+            </PersistentString>
+            <PersistentString
+               value = "json[&quot;items&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CarouselTableViewCell.carousel(iCarousel, viewForItemAt : Int, reusing : UIView?) -&gt; UIView:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageArray.count">
+            </PersistentString>
+            <PersistentString
+               value = "dataSource.items.count">
+            </PersistentString>
+            <PersistentString
+               value = "dataSource.type.getImageString()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -25,6 +50,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ViewController.(tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell).(closure #1).(closure #1):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tempLocalUrl.dataRepresentation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CarouselTableViewCell.numberOfItems(in : iCarousel) -&gt; Int:ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -40,17 +73,6 @@
          <PersistentStrings>
             <PersistentString
                value = "carouselJson.count">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "Carousel.init(json : [String : Any]) -&gt; Carousel?:carousel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "json[&quot;type&quot;] as? String">
-            </PersistentString>
-            <PersistentString
-               value = "json[&quot;items&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
