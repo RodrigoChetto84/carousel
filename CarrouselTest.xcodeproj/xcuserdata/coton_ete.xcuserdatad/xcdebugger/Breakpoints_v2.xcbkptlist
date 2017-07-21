@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarrouselTest/ViewController.swift"
-            timestampString = "522280775.815995"
+            timestampString = "522287318.094176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarrouselTest/ViewController.swift"
-            timestampString = "522280965.527853"
+            timestampString = "522287318.094176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarrouselTest/ViewController.swift"
-            timestampString = "522280775.815995"
+            timestampString = "522287318.094176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarrouselTest/ViewController.swift"
-            timestampString = "522280965.527853"
+            timestampString = "522287318.094176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarrouselTest/ViewController.swift"
-            timestampString = "522280965.527853"
+            timestampString = "522287318.094176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
             <Locations>
@@ -312,13 +312,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarrouselTest/ViewController.swift"
-            timestampString = "522280965.527853"
+            timestampString = "522287318.094176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarrouselTest/ViewController.swift"
+            timestampString = "522285710.755747"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "openPlayer(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarrouselTest.CarouselTableViewCell.openPlayer (sender : __ObjC.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "CarrouselTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/coton_ete/Desktop/Projects/CarrouselTest/CarrouselTest/ViewController.swift"
+                  timestampString = "522286019.312851"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "767">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarrouselTest.CarouselTableViewCell.openPlayer (sender : __ObjC.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "CarrouselTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/coton_ete/Desktop/Projects/CarrouselTest/CarrouselTest/ViewController.swift"
+                  timestampString = "522286019.31496"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

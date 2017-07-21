@@ -41,7 +41,7 @@ enum CarouselType : String{
     func getTitleBackgroundColor() -> UIColor?
     {
         switch self{
-        case .thumb: return UIColor.gray
+        case .thumb: return UIColor.lightGray
         case .poster: return UIColor.clear
         }
     }

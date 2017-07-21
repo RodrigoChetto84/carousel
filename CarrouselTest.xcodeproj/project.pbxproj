@@ -15,6 +15,7 @@
 		FB10F4931F1EA5B200AB42F3 /* carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10F4911F1EA5B200AB42F3 /* carousel.swift */; };
 		FB10F4941F1EA5B200AB42F3 /* movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10F4921F1EA5B200AB42F3 /* movie.swift */; };
 		FB10F49A1F1EA79000AB42F3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB10F4991F1EA79000AB42F3 /* iCarousel.m */; };
+		FB6115CD1F2177AA0046B94B /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6115CC1F2177AA0046B94B /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FB10F4981F1EA79000AB42F3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		FB10F4991F1EA79000AB42F3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		FB10F49B1F1EA7F000AB42F3 /* CarrouselTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarrouselTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB6115CC1F2177AA0046B94B /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				FB10F47C1F1E9DC500AB42F3 /* Assets.xcassets */,
 				FB10F47E1F1E9DC500AB42F3 /* LaunchScreen.storyboard */,
 				FB10F4811F1E9DC500AB42F3 /* Info.plist */,
+				FB6115CC1F2177AA0046B94B /* ModalViewController.swift */,
 			);
 			path = CarrouselTest;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				FB10F49A1F1EA79000AB42F3 /* iCarousel.m in Sources */,
 				FB10F4761F1E9DC500AB42F3 /* AppDelegate.swift in Sources */,
 				FB10F4931F1EA5B200AB42F3 /* carousel.swift in Sources */,
+				FB6115CD1F2177AA0046B94B /* ModalViewController.swift in Sources */,
 				FB10F4941F1EA5B200AB42F3 /* movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +344,7 @@
 				FB10F4861F1E9DC500AB42F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

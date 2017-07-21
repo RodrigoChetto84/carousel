@@ -44,8 +44,12 @@ class CarouselTableViewCell: UITableViewCell, iCarouselDelegate, iCarouselDataSo
         if let dataSource : Carousel = carouselDatasource {
             let tempView = UIImageView(frame: CGRect(x: 0, y: 0, width: dataSource.type.getWidth()  * UIScreen.main.bounds.width, height: (dataSource.type.getHeight()  * UIScreen.main.bounds.width)))
 
+            tempView.tag = index
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openPlayer(sender:)))
+            tempView.isUserInteractionEnabled = true
+            tempView.addGestureRecognizer(tapGestureRecognizer)
 
-            tempView.backgroundColor = UIColor.gray
+            tempView.backgroundColor = UIColor.lightGray
             if(imageArray.count == dataSource.items.count){
                 tempView.image = imageArray[index]
             }
@@ -78,11 +82,46 @@ class CarouselTableViewCell: UITableViewCell, iCarouselDelegate, iCarouselDataSo
         return value
     }
     
-    public override func awakeFromNib() {
-        super.awakeFromNib()
+    func openPlayer(sender: UITapGestureRecognizer)
+    {
+        
+        //using sender, we can get the point in respect to the table view
+        if let index = sender.view?.tag, let carrousel = self.carouselDatasource, let movie : Movie = carrousel.items[index] {
+            if let url: String = movie.video, let videoURL = URL(string: url) {
+                let player = AVPlayer(url: videoURL)
+                let playerViewController = AVPlayerViewController()
+                playerViewController.player = player
+                self.parentViewController?.present(playerViewController, animated: true) {
+                    
+                    playerViewController.player!.play()
+                }
+            } else {
+                showModal()
+            }
+        }
     }
+    
+    func showModal() {
+        let modalViewController = ModalViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        self.parentViewController?.present(modalViewController, animated: true)
+    }
+
 }
 
+
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder!.next
+            if parentResponder is UIViewController {
+                return parentResponder as! UIViewController!
+            }
+        }
+        return nil
+    }
+}
 
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -99,7 +138,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 [
                     "title": "La Playa",
                     "url": "",
-                    "video": ""],
+                    "video": "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"],
                 [
                     "title": "La Playa",
                     "url": "",
@@ -192,7 +231,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                             tempIcarrousel.delegate = carouselCell.self
                             
                             tempIcarrousel.center = CGPoint(x: carouselCell.contentView.frame.size.width  / 2, y: carouselCell.contentView.frame.size.height / 2)
-                            tempIcarrousel.type = .coverFlow
+                            tempIcarrousel.type = .rotary
                             
                             carouselCell.contentView.addSubview(tempIcarrousel)
                         }
