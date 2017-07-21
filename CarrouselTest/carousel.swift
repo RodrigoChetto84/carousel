@@ -1,4 +1,5 @@
 import Foundation
+import Darwin
 
 enum CarouselType : String{
     
@@ -18,9 +19,10 @@ enum CarouselType : String{
         }
     }
     func getImageString() -> String{
+        //The random number was added to avoid reloading of the same images
         switch self{
-        case .thumb: return "https://placeimg.com/640/480/any"
-        case .poster: return "https://placeimg.com/320/480/any"
+        case .thumb: return "http://placeimg.com/640/480/any?rng=\(Int(arc4random_uniform(1000)))"
+        case .poster: return "http://placeimg.com/320/480/any?rng=\(Int(arc4random_uniform(1000)))"
         }
     }
     

@@ -109,21 +109,6 @@ class CarouselTableViewCell: UITableViewCell, iCarouselDelegate, iCarouselDataSo
 
 }
 
-
-extension UIView {
-    var parentViewController: UIViewController? {
-        var parentResponder: UIResponder? = self
-        while parentResponder != nil {
-            parentResponder = parentResponder!.next
-            if parentResponder is UIViewController {
-                return parentResponder as! UIViewController!
-            }
-        }
-        return nil
-    }
-}
-
-
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
@@ -138,13 +123,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 [
                     "title": "La Playa",
                     "url": "",
-                    "video": "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"],
+                    "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"],
                 [
-                    "title": "La Playa",
+                    "title": "Peligro en Bankog",
                     "url": "",
                     "video": ""],
                 [
-                    "title": "La Playa",
+                    "title": "Todas contra John",
+                    "url": "",
+                    "video": ""],
+                [
+                    "title": "Quisiera ser millonario",
                     "url": "",
                     "video": ""]
             ]
@@ -156,16 +145,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 [
                     "title": "La Playa",
                     "url": "",
-                    "video": ""],
+                    "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"],
                 [
-                    "title": "La Playa",
+                    "title": "Peligro en Bankog",
                     "url": "",
                     "video": ""],
                 [
-                    "title": "La Playa",
+                    "title": "Todas contra John",
                     "url": "",
-                    "video": ""]
-            ]
+                    "video": ""],
+                [
+                    "title": "Quisiera ser millonario",
+                    "url": "",
+                    "video": ""]            ]
         ],
 
         [
@@ -175,16 +167,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 [
                     "title": "La Playa",
                     "url": "",
-                    "video": ""],
+                    "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"],
                 [
-                    "title": "La Playa",
+                    "title": "Peligro en Bankog",
                     "url": "",
                     "video": ""],
                 [
-                    "title": "La Playa",
+                    "title": "Todas contra John",
                     "url": "",
-                    "video": ""]
-            ]
+                    "video": ""],
+                [
+                    "title": "Quisiera ser millonario",
+                    "url": "",
+                    "video": ""]            ]
         ]
 
     ];
@@ -254,7 +249,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         if let carousel = Carousel(json: carouselJson[indexPath.item]) {
-            return carousel.type.getHeight() * UIScreen.main.bounds.width
+            return carousel.type.getHeight() * UIScreen.main.bounds.width + 10
         } else {
             //set a default value in case that there is an invalid element
             return 100.0
@@ -274,3 +269,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 }
 
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder!.next
+            if parentResponder is UIViewController {
+                return parentResponder as! UIViewController!
+            }
+        }
+        return nil
+    }
+}
